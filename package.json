@@ -1,0 +1,30 @@
+{
+  "name": "discord-dnd-bot",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "discord.js": "11.4.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.5.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.11.1"
+  },
+  "scripts": {
+    "lint": "eslint src --ext js",
+    "build": "babel -d ./dist ./src --copy-files",
+    "prestart": "npm run build",
+    "start": "set DEBUG=express:* & node ./dist/index.js"
+  }
+}
