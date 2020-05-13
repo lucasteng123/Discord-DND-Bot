@@ -3,8 +3,9 @@ import config from "./conf/main";
 import fs from "fs";
 
 
-const DiceRoller = require("./libs/DieRoller")
-const postUpcomingGame = require("./command_handlers/postUpcomingGame")
+const DiceRoller = require("./libs/DieRoller");
+const postUpcomingGame = require("./command_handlers/postUpcomingGame");
+const Poll = require("./command_handlers/poll");
 
 const client = new Discord.Client();
 
@@ -31,6 +32,7 @@ client.on("message",message=>{
 
   if (command == "newevent") postUpcomingGame(message)
   if (command == "roll") DiceRoller(message,prefix+"roll")
+  if (command == "poll") Poll(message,prefix+"poll")
   if (command == "changeprefix"){
     if(args[0]){
       prefix = args[0]
