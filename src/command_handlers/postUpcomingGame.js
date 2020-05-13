@@ -4,7 +4,7 @@ import Discord from "discord.js";
 import config from "../conf/main";
 import fs from "fs";
 
-module.exports = function(message) {
+module.exports = (message) => {
 
     if (message.attachments.first()) {
       let file = message.attachments.first(); //this is the attchment you choose to use

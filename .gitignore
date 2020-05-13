@@ -1,3 +1,5 @@
 node_modules
 dist
 src/conf/main.js
+.DS_Store
+package-lock.json
