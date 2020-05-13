@@ -1,8 +1,33 @@
+const helpMessage = {
+	color: 0x0099ff,
+	title: 'Marvin Help',
+	fields: [
+		{
+			name: 'help',
+			value: 'Will show this help document',
+        },
+        {
+			name: 'newevent',
+			value: 'Create a New Event post, you must upload a .json file with all of the details of your event',
+        },
+        {
+			name: 'roll',
+			value: '==andrew please write out some doc for this==',
+        },
+        {
+			name: 'changeprefix',
+			value: 'Change the symbol used before commands to summon the bot. Expects a symbol. Example: `!changeprefix ?`',
+		},
+		
+	],
+	timestamp: new Date(),
+}
+
 export default {
     token:"",//Enter your discord bot token here
     prefix:"!",
     helpMessageDM:"Possible Commands:\n *channel manipulation*\n`!startvote`:Starts a vote in this channel, stops people from being able to chat in it\n  `!endvote`:Stops the vote, allows people to chat in the voting channel again.\n`!configvotingpower @person #`: Configure how many votes a single person has\n~~!setdaychat:sets this channel to be active during the day, and not at night~~\n\n*Game Functions*\n`!vote @user`:Vote in an active voting channel\n~~!endday:ends the day, closes chats and active votes.~~\n~~!endnight:same as above, but opens chats~~",
-    helpMessageUser:"Possible Commands:\n `!vote @user`,\n`!vote nokill`",
+    helpMessageUser:helpMessage,
     introduction:"Doing this to get away from the tedium of the heart of gold, feel free to ignore me most of the time, like everyone else does.",
     server:{
         gameStarted:false,
