@@ -11,6 +11,32 @@ const client = new Discord.Client();
 
 var prefix = config.prefix
 
+const helpMessage = {
+	color: 0x0099ff,
+	title: 'Marvin Help',
+	fields: [
+		{
+			name: 'help',
+			value: 'Will show this help document',
+        },
+        {
+			name: 'newevent',
+			value: 'Create a New Event post, you must upload a .json file with all of the details of your event. Contact <@180861025690714112> for more details.',
+        },
+        {
+			name: 'roll',
+			value: 'Roll any combination of dice, and do any math required on the result. Example `!roll (1d6+2d8)*2+5`',
+        },
+        {
+      name: 'poll',
+      value: 'create a new poll. Add a question followed by a comma-seperated list of answers. Ex. `!poll Question?, Answer 1, Answer 2, Answer 3, Answer 4'
+        }
+		
+	],
+	timestamp: new Date(),
+}
+
+
 
 
 client.once("ready", () => {
@@ -43,7 +69,7 @@ client.on("message",message=>{
     }
   }
   if (command == "help"){
-    message.author.send({embed:config.helpMessageUser})
+    message.channel.send({embed:helpMessage})
     message.delete()
   }
 

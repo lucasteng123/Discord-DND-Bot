@@ -1,6 +1,6 @@
 {
   "name": "discord-dnd-bot",
-  "version": "1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "discord.js": "11.4.2"

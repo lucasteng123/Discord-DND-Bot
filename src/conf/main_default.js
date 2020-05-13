@@ -1,27 +1,3 @@
-const helpMessage = {
-	color: 0x0099ff,
-	title: 'Marvin Help',
-	fields: [
-		{
-			name: 'help',
-			value: 'Will show this help document',
-        },
-        {
-			name: 'newevent',
-			value: 'Create a New Event post, you must upload a .json file with all of the details of your event',
-        },
-        {
-			name: 'roll',
-			value: '==andrew please write out some doc for this==',
-        },
-        {
-			name: 'changeprefix',
-			value: 'Change the symbol used before commands to summon the bot. Expects a symbol. Example: `!changeprefix ?`',
-		},
-		
-	],
-	timestamp: new Date(),
-}
 
 export default {
     token:"",//Enter your discord bot token here
