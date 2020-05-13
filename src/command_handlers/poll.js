@@ -3,6 +3,7 @@ import Discord from "discord.js";
 import fs from "fs";
 
 module.exports = (message,commandString) => {
+    if(!message.guild) return
     //trim the command off the front of the 
     var messageText = message.content
     var input = messageText.replace(commandString,"")

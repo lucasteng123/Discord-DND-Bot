@@ -5,7 +5,7 @@ import config from "../conf/main";
 import fs from "fs";
 
 module.exports = (message) => {
-
+  if(!message.guild) return
     if (message.attachments.first()) {
       let file = message.attachments.first(); //this is the attchment you choose to use
       https.get(file.url, function(res){
@@ -100,5 +100,5 @@ module.exports = (message) => {
     } else {
       message.author.send("Please attach a JSON file with your event details.")
     }
-    message.delete()
+    if(message.guild) message.delete()
   }

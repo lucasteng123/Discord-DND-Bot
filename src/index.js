@@ -45,7 +45,7 @@ client.once("ready", () => {
 });
 
 client.on("message",message=>{
-  if(!message.guild) return
+  
   if(!message.content.startsWith(prefix) || message.author.bot) return
 
   const args = message.content

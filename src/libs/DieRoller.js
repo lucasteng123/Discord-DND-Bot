@@ -3,6 +3,7 @@ const fs = require('fs');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+
 /**
  * @param  {Discord:Message} message: Pass the incurring message for the command
  * @param  {string} commandString: Pass the entire string to strip off the front of the message
