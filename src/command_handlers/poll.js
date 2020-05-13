@@ -31,5 +31,6 @@ module.exports = (message,commandString) => {
             msg.react(emoji)
         });
     })
+    message.delete()
     
 }
