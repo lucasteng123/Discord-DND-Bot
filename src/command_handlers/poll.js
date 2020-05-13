@@ -10,9 +10,9 @@ module.exports = (message,commandString) => {
     var slicedMessage = input.split(/,/g)
     
     //remove whitespace from front of elements
-    slicedMessage.forEach(element => {
-        element = element.replace(/^\s+/g, '');
-    });
+    for (let index = 0; index < slicedMessage.length; index++) {
+        slicedMessage[index] = slicedMessage[index].replace(/^\s+/g, '');
+    }
 
     //TODO add in error message
     if(slicedMessage.length<2) return
