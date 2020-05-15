@@ -65,7 +65,7 @@ client.on("message",message=>{
       message.channel.send(`Changed prefix to: ${prefix}`)
     } else {
       message.author.send("Please specify a prefix")
-      message.delete()
+      if(message.guild) message.delete()
     }
   }
   if (command == "help"){
