@@ -8,7 +8,7 @@ module.exports = (message,commandString) => {
     var messageText = message.content
     var input = messageText.replace(commandString,"")
 
-    var slicedMessage = input.split(/,/g)
+    var slicedMessage = input.split(/;/g)
     
     //remove whitespace from front of elements
     for (let index = 0; index < slicedMessage.length; index++) {
